@@ -7,11 +7,9 @@ set(CMAKE_MODULE_PATH ${CMAKE_MODULE_PATH} ${PROJECT_SOURCE_DIR})
 enable_language(CXX)
 
 find_package(kodi REQUIRED)
-find_package(kodiplatform REQUIRED)
 find_package(Openmpt REQUIRED)
 
-include_directories(${kodiplatform_INCLUDE_DIRS}
-                    ${KODI_INCLUDE_DIR}
+include_directories(${KODI_INCLUDE_DIR}
                     ${OPENMPT_INCLUDE_DIRS})
 
 set(OPENMPT_SOURCES src/OpenMptCodec.cpp)
